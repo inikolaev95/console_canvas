@@ -1,4 +1,4 @@
-#include "Shapes.h"
+#include "FunctionPlot.h"
 
 FunctionPlot::FunctionPlot(
     std::function<double(double)> f,

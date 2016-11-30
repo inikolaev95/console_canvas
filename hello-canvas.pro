@@ -20,5 +20,11 @@ HEADERS += \
     ScreenBuffer.h \
     Canvas.h \
     Shapes.h \
-    Paintable.h
+    Paintable.h \
+    Shape.h \
+    Rectangle.h \
+    Ellipse.h \
+    Triangle.h \
+    CoordinateAxes.h \
+    FunctionPlot.h
 
