@@ -26,5 +26,6 @@ HEADERS += \
     Ellipse.h \
     Triangle.h \
     CoordinateAxes.h \
-    FunctionPlot.h
+    FunctionPlot.h \
+    Factory.h
 

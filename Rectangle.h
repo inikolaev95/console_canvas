@@ -6,6 +6,7 @@
 class Rectangle : public Shape
 {
 public:
+    Rectangle();
     Rectangle(
             const PointF& bottomLeft,
             const PointF& topRight);
