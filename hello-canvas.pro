@@ -19,5 +19,6 @@ HEADERS += \
     Point.h \
     ScreenBuffer.h \
     Canvas.h \
-    Shapes.h
+    Shapes.h \
+    Paintable.h
 

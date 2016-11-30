@@ -3,7 +3,7 @@
 #include <cmath>
 #include <functional>
 
-#include "Shapes.h"
+#include "Paintable.h"
 
 using namespace std;
 
@@ -58,12 +58,12 @@ int main()
         Canvas c(&sb,
                PointF(0, 0), PointF(1, 1));
 
-        Rectangle r(
-                    PointF(0.5,0.5),
-                    PointF(0.9,0.9));
-        r.paint(c);
+//        Rectangle r(
+//                    PointF(0.5,0.5),
+//                    PointF(0.9,0.9));
+//        r.paint(c);
 
-        CoordinateAxes().paint(c);
+//        CoordinateAxes().paint(c);
         // FunctionPlot(sin, '*').paint(c);
 
         /*

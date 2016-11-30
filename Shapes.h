@@ -1,14 +1,8 @@
 #ifndef SHAPES_H
 #define SHAPES_H
 
-#include "Canvas.h"
+#include "Paintable.h"
 #include <functional>
-
-struct Paintable
-{
-    virtual ~Paintable() {}
-    virtual void paint(Canvas& c) const = 0;
-};
 
 class Shape : public Paintable
 {
