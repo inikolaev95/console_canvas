@@ -50,15 +50,16 @@ void helloBind()
 int main()
 {
     try {
-        Point p1(1,2);
-        PointF p2 = p1.convertTo<double>();
+        // p1(1,2);
+        //PointF p2 = p1.convertTo<double>();
         // cout << p2;
 
         ScreenBuffer sb(79, 23);
         Canvas c(&sb,
-               PointF(0, 0), PointF(1, 1));
+               PointF(0, 0), PointF(10, 10));
 
-        auto r = Paintable::newInstance("rectangle");
+
+        auto r = Paintable::newInstance("line");
 
 //        Rectangle r(
 //                    PointF(0.5,0.5),
