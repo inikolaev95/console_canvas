@@ -13,7 +13,10 @@ SOURCES += main.cpp \
     Ellipse.cpp \
     Triangle.cpp \
     CoordinateAxes.cpp \
-    FunctionPlot.cpp
+    FunctionPlot.cpp \
+    Line.cpp \
+
+
 
 HEADERS += \
     Point.h \
@@ -27,5 +30,7 @@ HEADERS += \
     Triangle.h \
     CoordinateAxes.h \
     FunctionPlot.h \
-    Factory.h
+    Factory.h \
+    line.h
+
 
