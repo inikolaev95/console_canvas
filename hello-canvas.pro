@@ -27,5 +27,7 @@ HEADERS += \
     Triangle.h \
     CoordinateAxes.h \
     FunctionPlot.h \
-    Factory.h
-
+    Factory.h \
+    Variant.h \
+    VariantMap.h \
+    Persistent.h

@@ -2,9 +2,10 @@
 #define POINT_H
 
 #include <algorithm>
+#include "Persistent.h"
 
 template< class T >
-struct PointTemplate
+struct PointTemplate : public Persistent
 {
     T x;
     T y;
@@ -25,6 +26,18 @@ struct PointTemplate
 
     T infNorm() const {
         return std::max(std::abs(x), std::abs(y));
+    }
+
+    void load(const VariantMap& m) {
+        x = m.get<T>("x");
+        y = m.get<T>("y");
+    }
+
+    VariantMap save() const {
+        return VariantMap()
+                << VariantMap::Item("x", x)
+                << VariantMap::Item("y", y);
+
     }
 };
 
