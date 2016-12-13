@@ -3,7 +3,9 @@
 
 #include "Shape.h"
 
-class Rectangle : public Shape
+class Rectangle :
+    public Shape,
+    public Persistent
 {
 public:
     Rectangle();
@@ -11,6 +13,8 @@ public:
             const PointF& bottomLeft,
             const PointF& topRight);
     void paint(Canvas& c) const;
+    void load(const VariantMap&m);
+    VariantMap save() const;
 private:
     PointF m_bottomLeft;
     PointF m_topRight;
