@@ -17,3 +17,14 @@ void CoordinateAxes::paint(Canvas &c) const
 }
 
 
+void CoordinateAxes::load(const VariantMap& m)
+{
+}
+
+VariantMap CoordinateAxes::save() const
+{
+    return VariantMap();
+}
+
+DECL_FACTORY_TYPE(Paintable,CoordinateAxes, "coordinate_axes")
+

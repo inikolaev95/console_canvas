@@ -67,7 +67,8 @@ int main()
              << VariantMap::Item( "bottomLeft", VariantMap() << VariantMap::Item("x", 0.5) << VariantMap::Item("y", 0.5) )
              << VariantMap::Item( "topRight", VariantMap() << VariantMap::Item("x", 0.9) << VariantMap::Item("y", 0.9) ));
         r->paint(c);
-
+        auto ca = Paintable::newInstance("coordinate_axes");
+        ca->paint(c);
 //        CoordinateAxes().paint(c);
         // FunctionPlot(sin, '*').paint(c);
 
