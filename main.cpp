@@ -4,6 +4,7 @@
 #include <functional>
 
 #include "Paintable.h"
+#include "Ellipse.h"
 
 using namespace std;
 
@@ -54,16 +55,16 @@ int main()
         PointF p2 = p1.convertTo<double>();
         // cout << p2;
 
-        ScreenBuffer sb(79, 23);
+        ScreenBuffer sb(150, 150);
         Canvas c(&sb,
-               PointF(0, 0), PointF(1, 1));
+               PointF(0, 0), PointF(150, 150));
 
-        auto r = Paintable::newInstance("rectangle");
+        Ellipse(PointF(40, 10),5).paint(c);
 
 //        Rectangle r(
 //                    PointF(0.5,0.5),
 //                    PointF(0.9,0.9));
-        r->paint(c);
+
 
 //        CoordinateAxes().paint(c);
         // FunctionPlot(sin, '*').paint(c);
