@@ -31,6 +31,9 @@ HEADERS += \
     CoordinateAxes.h \
     FunctionPlot.h \
     Factory.h \
-    line.h
+    line.h \
+    Persistent.h \
+    Variant.h \
+    VariantMap.h
 
 

@@ -2,6 +2,7 @@
 #define LINE_H
 
 #include "Shape.h"
+#include "VariantMap.h"
 
 
 class Line: public Shape
@@ -13,6 +14,8 @@ class Line: public Shape
             const PointF& p2);
 
     void paint(Canvas &c) const;
+    void load(const VariantMap&m);
+    VariantMap save() const;
 
 private:
     PointF m_p1;

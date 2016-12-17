@@ -1,4 +1,7 @@
 #include "line.h"
+#include "Variant.h"
+#include "VariantMap.h"
+
 
 Line::Line() {}
 
@@ -47,5 +50,22 @@ void Line::paint(Canvas& c) const
       } while (x != m_p2.x || y != m_p2.y);
     }
   }
+
+
+// Не понимаю, что просит. m_p1 существует.
+
+void Line::load(const VariantMap& m)
+{
+    m_p1.load(m.get<VariantMap>("p1"));
+    m_p2.load(m.get<VariantMap>("p2"));
+}
+
+VariantMap Line::save() const
+{
+    return VariantMap()
+            << VariantMap::Item("p1", m_p1.save())
+            << VariantMap::Item("p2", m_p2.save());
+}
+
 
 DECL_FACTORY_TYPE(Paintable, Line, "line")

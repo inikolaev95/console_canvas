@@ -59,12 +59,11 @@ int main()
                PointF(0, 0), PointF(10, 10));
 
 
-        auto r = Paintable::newInstance("line");
+
 
 //        Rectangle r(
 //                    PointF(0.5,0.5),
 //                    PointF(0.9,0.9));
-        r->paint(c);
 
 //        CoordinateAxes().paint(c);
         // FunctionPlot(sin, '*').paint(c);
