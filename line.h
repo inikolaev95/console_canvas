@@ -2,10 +2,11 @@
 #define LINE_H
 
 #include "Shape.h"
-#include "VariantMap.h"
 
 
-class Line: public Shape
+
+class Line: public Shape,
+            public Persistent
 {
    public:
     Line();
