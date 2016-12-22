@@ -29,10 +29,8 @@ HEADERS += \
     CoordinateAxes.h \
     FunctionPlot.h \
     Factory.h \
-
-	line.h
+    line.h\
     Variant.h \
     VariantMap.h \
-    Persistent.h
-
+    Persistent.h\
 
