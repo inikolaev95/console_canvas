@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "line.h"
 #include "Variant.h"
 #include "VariantMap.h"
@@ -69,3 +70,5 @@ VariantMap Line::save() const
 
 
 DECL_FACTORY_TYPE(Paintable, Line, "line")
+=======
+>>>>>>> parent of 7a43a0e... Add class "Line"

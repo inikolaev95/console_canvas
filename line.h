@@ -1,6 +1,7 @@
 #ifndef LINE_H
 #define LINE_H
 
+<<<<<<< HEAD
 #include "Shape.h"
 #include "VariantMap.h"
 
@@ -23,4 +24,6 @@ private:
 
 };
 
+=======
+>>>>>>> parent of 7a43a0e... Add class "Line"
 #endif // LINE_H

@@ -50,16 +50,20 @@ void helloBind()
 int main()
 {
     try {
-        // p1(1,2);
-        //PointF p2 = p1.convertTo<double>();
+        Point p1(1,2);
+        PointF p2 = p1.convertTo<double>();
         // cout << p2;
 
         ScreenBuffer sb(79, 23);
         Canvas c(&sb,
-               PointF(0, 0), PointF(10, 10));
+               PointF(0, 0), PointF(1, 1));
+
+<<<<<<< HEAD
 
 
-
+=======
+        auto r = Paintable::newInstance("rectangle");
+>>>>>>> parent of 7a43a0e... Add class "Line"
 
 //        Rectangle r(
 //                    PointF(0.5,0.5),
