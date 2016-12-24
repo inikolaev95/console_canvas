@@ -4,6 +4,7 @@
 #include <functional>
 
 #include "Paintable.h"
+#include "Line.h"
 
 using namespace std;
 
@@ -56,18 +57,22 @@ int main()
 
         ScreenBuffer sb(79, 23);
         Canvas c(&sb,
-               PointF(0, 0), PointF(10, 10));
+               PointF(0, 0), PointF(5, 5));
 
 
         auto r = Paintable::newInstance("line");
 
-//        Rectangle r(
-//                    PointF(0.5,0.5),
-//                    PointF(0.9,0.9));
+
+
+
+
         load(r, VariantMap()
-             << VariantMap::Item( "bottomLeft", VariantMap() << VariantMap::Item("x", 0.5) << VariantMap::Item("y", 0.5) )
-             << VariantMap::Item( "topRight", VariantMap() << VariantMap::Item("x", 0.9) << VariantMap::Item("y", 0.9) ));
+             << VariantMap::Item( "p1", VariantMap() << VariantMap::Item("p1", PointF(0,0)))
+             << VariantMap::Item( "p2", VariantMap() << VariantMap::Item("p2", PointF(3,3))));
+
         r->paint(c);
+
+
 
 //        CoordinateAxes().paint(c);
         // FunctionPlot(sin, '*').paint(c);
