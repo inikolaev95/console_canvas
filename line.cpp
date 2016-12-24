@@ -60,12 +60,12 @@ void Line::load(const VariantMap& m)
     m_p2.load(m.get<VariantMap>("p2"));
 }
 
-VariantMap Line::save() const
+VariantMap Rectangle::save() const
 {
     return VariantMap()
-            << VariantMap::Item("p1", m_p1.save())
-            << VariantMap::Item("p2", m_p2.save());
+            << VariantMap::Item("p1", m_bottomLeft.save())
+            << VariantMap::Item("p2", m_topRight.save());
 }
 
+DECL_FACTORY_TYPE(Paintable, Rectangle, "line")
 
-DECL_FACTORY_TYPE(Paintable, Line, "line")
