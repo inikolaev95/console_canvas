@@ -1,10 +1,10 @@
 #include "Ellipse.h"
 
 
-
+Ellipse::Ellipse(){};
 
 Ellipse::Ellipse(const PointF& C1,
-        const double rad) :
+        const PointF rad) :
     m_C1(C1),
     m_rad(rad)
 {
@@ -12,9 +12,10 @@ Ellipse::Ellipse(const PointF& C1,
 
 void Ellipse::paint(Canvas& c) const
 {
+    double radius=sqrt((m_C1.x-m_rad.x)*(m_C1.x-m_rad.x)+(m_C1.y-m_rad.y)*(m_C1.y-m_rad.y));
     double x=0;
-    double y = m_rad;
-    double delta=1-2*m_rad;
+    double y = radius;
+    double delta=1-2*radius;
     double error=0;
     while (y>=0) {
         c.setColor(m_C1.x+x,m_C1.y+y);
@@ -39,3 +40,19 @@ void Ellipse::paint(Canvas& c) const
     }
 
 }
+
+void Ellipse::load(const VariantMap& m)
+{
+    m_C1.load(m.get<VariantMap>("C1"));
+    m_rad.load(m.get<VariantMap>("rad"));
+}
+
+VariantMap Ellipse::save() const
+{
+    return VariantMap()
+            << VariantMap::Item("C1", m_C1.save())
+            << VariantMap::Item("rad", m_rad.save());
+}
+
+DECL_FACTORY_TYPE(Paintable, Ellipse, "ellipse")
+

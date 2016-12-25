@@ -3,17 +3,20 @@
 
 #include "Shape.h"
 
-class Ellipse : public Shape
+class Ellipse : public Shape,
+                public Persistent
 {
 public:
 
-   Ellipse(
-            const PointF& C1,
-            const double rad);
+   Ellipse();
+   Ellipse(const PointF& C1,
+            const PointF rad);
     void paint(Canvas& c) const;
+    void load(const VariantMap&m);
+    VariantMap save() const;
 private:
     PointF m_C1;
-    double m_rad;
+    PointF m_rad;
 };
 #endif // ELLIPSE_H
 

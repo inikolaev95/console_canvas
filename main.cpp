@@ -58,14 +58,14 @@ int main()
         Canvas c(&sb,
                PointF(0, 0), PointF(1, 1));
 
-        auto r = Paintable::newInstance("rectangle");
+        auto r = Paintable::newInstance("ellipse");
 
 //        Rectangle r(
 //                    PointF(0.5,0.5),
 //                    PointF(0.9,0.9));
         load(r, VariantMap()
-             << VariantMap::Item( "bottomLeft", VariantMap() << VariantMap::Item("x", 0.5) << VariantMap::Item("y", 0.5) )
-             << VariantMap::Item( "topRight", VariantMap() << VariantMap::Item("x", 0.9) << VariantMap::Item("y", 0.9) ));
+             << VariantMap::Item( "C1", VariantMap() << VariantMap::Item("x", 0.5) << VariantMap::Item("y", 0.5) )
+             << VariantMap::Item( "rad", VariantMap() << VariantMap::Item("x", 0.9) << VariantMap::Item("y", 0.9) ));
         r->paint(c);
 
 //        CoordinateAxes().paint(c);
