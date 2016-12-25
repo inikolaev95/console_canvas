@@ -5,7 +5,7 @@
 #include <functional>
 
 #include "Rectangle.h"
-#include "Ellipse.h"
+#include "Circle.h"
 #include "Triangle.h"
 #include "CoordinateAxes.h"
 #include "FunctionPlot.h"

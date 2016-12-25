@@ -10,10 +10,10 @@ SOURCES += main.cpp \
     ScreenBuffer.cpp \
     Shapes.cpp \
     Rectangle.cpp \
-    Ellipse.cpp \
     Triangle.cpp \
     CoordinateAxes.cpp \
-    FunctionPlot.cpp
+    FunctionPlot.cpp \
+    Circle.cpp
 
 HEADERS += \
     Point.h \
@@ -23,11 +23,11 @@ HEADERS += \
     Paintable.h \
     Shape.h \
     Rectangle.h \
-    Ellipse.h \
     Triangle.h \
     CoordinateAxes.h \
     FunctionPlot.h \
     Factory.h \
     Variant.h \
     VariantMap.h \
-    Persistent.h
+    Persistent.h \
+    Circle.h

@@ -3,13 +3,13 @@
 
 #include "Shape.h"
 
-class Ellipse : public Shape,
+class Circle : public Shape,
                 public Persistent
 {
 public:
 
-   Ellipse();
-   Ellipse(const PointF& C1,
+   Circle();
+   Circle(const PointF& C1,
             const PointF rad);
     void paint(Canvas& c) const;
     void load(const VariantMap&m);

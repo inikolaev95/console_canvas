@@ -1,16 +1,16 @@
-#include "Ellipse.h"
+#include "Circle.h"
 
 
-Ellipse::Ellipse(){};
+Circle::Circle(){};
 
-Ellipse::Ellipse(const PointF& C1,
+Circle::Circle(const PointF& C1,
         const PointF rad) :
     m_C1(C1),
     m_rad(rad)
 {
 }
 
-void Ellipse::paint(Canvas& c) const
+void Circle::paint(Canvas& c) const
 {
     double radius=sqrt((m_C1.x-m_rad.x)*(m_C1.x-m_rad.x)+(m_C1.y-m_rad.y)*(m_C1.y-m_rad.y));
     double x=0;
@@ -41,18 +41,18 @@ void Ellipse::paint(Canvas& c) const
 
 }
 
-void Ellipse::load(const VariantMap& m)
+void Circle::load(const VariantMap& m)
 {
     m_C1.load(m.get<VariantMap>("C1"));
     m_rad.load(m.get<VariantMap>("rad"));
 }
 
-VariantMap Ellipse::save() const
+VariantMap Circle::save() const
 {
     return VariantMap()
             << VariantMap::Item("C1", m_C1.save())
             << VariantMap::Item("rad", m_rad.save());
 }
 
-DECL_FACTORY_TYPE(Paintable, Ellipse, "ellipse")
+DECL_FACTORY_TYPE(Paintable, Circle, "circle")
 

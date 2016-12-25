@@ -58,7 +58,7 @@ int main()
         Canvas c(&sb,
                PointF(0, 0), PointF(1, 1));
 
-        auto r = Paintable::newInstance("ellipse");
+        auto r = Paintable::newInstance("circle");
 
 //        Rectangle r(
 //                    PointF(0.5,0.5),
