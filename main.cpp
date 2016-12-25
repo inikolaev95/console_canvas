@@ -67,10 +67,10 @@ int main()
 
 
         load(r, VariantMap()
-             << VariantMap::Item( "p1", VariantMap() << VariantMap::Item("p1", PointF(0.1,0.1)))
-             << VariantMap::Item( "p2", VariantMap() << VariantMap::Item("p2", PointF(0.9,0.9))));
-
+             << VariantMap::Item( "p1", VariantMap() << VariantMap::Item("x", 0.1) << VariantMap::Item("y", 0.1) )
+             << VariantMap::Item( "p2", VariantMap() << VariantMap::Item("x", 0.9) << VariantMap::Item("y", 0.1) ));
         r->paint(c);
+
 
 
 

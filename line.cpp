@@ -38,7 +38,7 @@ void Line::paint(Canvas& c) const
           y+=signa*c.pixelHeight();
         }
         x-=signb*c.pixelWidth();
-        c.setColor(x,y);
+        c.setColor(x,y,'|');
       } while (x < m_p2.x || y < m_p2.y);
     } else {
       do {
@@ -48,8 +48,8 @@ void Line::paint(Canvas& c) const
           x-=signb*c.pixelWidth();
         }
         y+=signa*c.pixelHeight();
-       c.setColor(x,y);
-      } while (x < m_p2.x || y < m_p2.y);
+       c.setColor(x,y,'-');
+      } while (x > m_p2.x || y > m_p2.y);
     }
   }
 
