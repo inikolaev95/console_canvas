@@ -4,6 +4,7 @@
 #include <functional>
 
 #include "Paintable.h"
+#include "Triangle.h"
 
 using namespace std;
 
@@ -60,14 +61,16 @@ int main()
 
         auto r = Paintable::newInstance("rectangle");
 
+        Triangle(PointF(0.6,0.8),PointF(0.2,0.4),PointF(0.9,0.1)).paint(c);
+
 //        Rectangle r(
 //                    PointF(0.5,0.5),
 //                    PointF(0.9,0.9));
-        load(r, VariantMap()
+   /*     load(r, VariantMap()
              << VariantMap::Item( "bottomLeft", VariantMap() << VariantMap::Item("x", 0.5) << VariantMap::Item("y", 0.5) )
              << VariantMap::Item( "topRight", VariantMap() << VariantMap::Item("x", 0.9) << VariantMap::Item("y", 0.9) ));
         r->paint(c);
-
+  */
 //        CoordinateAxes().paint(c);
         // FunctionPlot(sin, '*').paint(c);
 
