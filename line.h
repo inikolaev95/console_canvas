@@ -1,7 +1,7 @@
 #ifndef LINE_H
 #define LINE_H
 
-#include "Shape.h"
+#include "Shapes.h"
 
 
 
@@ -14,7 +14,7 @@ class Line: public Shape,
             const PointF& p1,
             const PointF& p2);
 
-    void paint(Canvas &sb) const;
+    void paint(Canvas &c) const;
     void load(const VariantMap&m);
     VariantMap save() const;
 

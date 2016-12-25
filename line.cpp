@@ -15,7 +15,7 @@ Line::Line(
 
 void Line::paint(Canvas& c) const
 {
-    int A, B, sign;
+    double A, B, sign;
     A = m_p2.y - m_p1.y;
     B = m_p1.x - m_p2.x;
     if (abs(A) > abs(B)) sign = 1;
@@ -25,7 +25,9 @@ void Line::paint(Canvas& c) const
     else signa = 1;
     if (B < 0) signb = -1;
     else signb = 1;
-    int f = 0;
+    if (B == 0) signb =0;
+    if (A==0) signa=0;
+    double f = 0;
     //c[m_p1.y][m_p1.x] = '*';
     auto x = m_p1.x, y = m_p1.y;
     if (sign == -1) {
@@ -33,21 +35,21 @@ void Line::paint(Canvas& c) const
         f += A*signa;
         if (f > 0) {
           f -= B*signb;
-          y+=signa;
+          y+=signa*c.pixelHeight();
         }
-        x-=signb;
+        x-=signb*c.pixelWidth();
         c.setColor(x,y);
-      } while (x != m_p2.x || y != m_p2.y);
+      } while (x < m_p2.x || y < m_p2.y);
     } else {
       do {
         f += B*signb;
         if (f > 0) {
           f -= A*signa;
-          x-=signb;
+          x-=signb*c.pixelWidth();
         }
-        y+=signa;
+        y+=signa*c.pixelHeight();
        c.setColor(x,y);
-      } while (x != m_p2.x || y != m_p2.y);
+      } while (x < m_p2.x || y < m_p2.y);
     }
   }
 
@@ -60,12 +62,12 @@ void Line::load(const VariantMap& m)
     m_p2.load(m.get<VariantMap>("p2"));
 }
 
-VariantMap Rectangle::save() const
+VariantMap Line::save() const
 {
     return VariantMap()
-            << VariantMap::Item("p1", m_bottomLeft.save())
-            << VariantMap::Item("p2", m_topRight.save());
+            << VariantMap::Item("p1", m_p1.save())
+            << VariantMap::Item("p2", m_p2.save());
 }
 
-DECL_FACTORY_TYPE(Paintable, Rectangle, "line")
+DECL_FACTORY_TYPE(Paintable, Line, "line")
 

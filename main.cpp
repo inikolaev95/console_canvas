@@ -4,7 +4,8 @@
 #include <functional>
 
 #include "Paintable.h"
-#include "Line.h"
+#include "Shapes.h"
+
 
 using namespace std;
 
@@ -57,21 +58,21 @@ int main()
 
         ScreenBuffer sb(79, 23);
         Canvas c(&sb,
-               PointF(0, 0), PointF(5, 5));
+               PointF(0, 0), PointF(1, 1));
 
 
-        auto r = Paintable::newInstance("line");
+        //auto r = Paintable::newInstance("line");
+
+        Line (PointF(0.6,0.9),PointF(0.1,0.9)).paint(c);
 
 
 
-
-
-        load(r, VariantMap()
+        /*load(r, VariantMap()
              << VariantMap::Item( "p1", VariantMap() << VariantMap::Item("p1", PointF(0,0)))
              << VariantMap::Item( "p2", VariantMap() << VariantMap::Item("p2", PointF(3,3))));
 
         r->paint(c);
-
+*/
 
 
 //        CoordinateAxes().paint(c);
