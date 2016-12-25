@@ -9,5 +9,6 @@
 #include "Triangle.h"
 #include "CoordinateAxes.h"
 #include "FunctionPlot.h"
+#include "line.h"
 
 #endif // SHAPES_H

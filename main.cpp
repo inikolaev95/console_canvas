@@ -4,6 +4,7 @@
 #include <functional>
 
 #include "Paintable.h"
+//#include "Shapes.h"
 #include "Triangle.h"
 
 using namespace std;
@@ -59,9 +60,19 @@ int main()
         Canvas c(&sb,
                PointF(0, 0), PointF(1, 1));
 
-        auto r = Paintable::newInstance("rectangle");
+        //auto r = Paintable::newInstance("Triangle");
 
+/*
+               load(r, VariantMap()
+                    << VariantMap::Item( "v1", VariantMap() << VariantMap::Item("x", 0.6) << VariantMap::Item("y", 0.8) )
+                    << VariantMap::Item( "v2", VariantMap() << VariantMap::Item("x", 0.2) << VariantMap::Item("y", 0.4) )
+                    << VariantMap::Item( "v3", VariantMap() << VariantMap::Item("x", 0.9) << VariantMap::Item("y", 0.1) ));
+               r->paint(c);
+*/
+
+        //I don't understand why lines aren't drawn correctly on triangle borders
         Triangle(PointF(0.6,0.8),PointF(0.2,0.4),PointF(0.9,0.1)).paint(c);
+
 
 //        Rectangle r(
 //                    PointF(0.5,0.5),
