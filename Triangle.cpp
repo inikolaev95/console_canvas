@@ -1,9 +1,11 @@
 #include "Triangle.h"
 #include "line.h"
-//#include "Variant.h"
-//#include "VariantMap.h"
+#include "Variant.h"
+#include "VariantMap.h"
 
 using namespace std;
+
+Triangle::Triangle() {}
 
 Triangle::Triangle(
         const PointF& v1,
@@ -51,7 +53,7 @@ void Triangle::paint(Canvas& c) const
           Line(PointF(m_v3.x,m_v3.y),PointF(m_v2.x,m_v2.y)).paint(c);
     }
     }
-/*
+
 void Triangle::load(const VariantMap& m)
 {
     m_v1.load(m.get<VariantMap>("v1"));
@@ -68,4 +70,4 @@ VariantMap Triangle::save() const
 }
 
 DECL_FACTORY_TYPE(Paintable, Triangle, "Triangle")
-*/
+
