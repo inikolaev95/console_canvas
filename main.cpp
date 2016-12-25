@@ -55,11 +55,11 @@ int main()
         PointF p2 = p1.convertTo<double>();
         // cout << p2;
 
-        ScreenBuffer sb(150, 150);
+        ScreenBuffer sb(79, 23);
         Canvas c(&sb,
-               PointF(0, 0), PointF(150, 150));
+               PointF(0, 0), PointF(1, 1));
 
-        Ellipse(PointF(40, 10),5).paint(c);
+        Ellipse(PointF(0.5, 0.5),0.5).paint(c);
 
 //        Rectangle r(
 //                    PointF(0.5,0.5),

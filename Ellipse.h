@@ -9,11 +9,11 @@ public:
 
    Ellipse(
             const PointF& C1,
-            const int rad);
+            const double rad);
     void paint(Canvas& c) const;
 private:
     PointF m_C1;
-    int m_rad;
+    double m_rad;
 };
 #endif // ELLIPSE_H
 
