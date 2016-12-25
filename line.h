@@ -14,7 +14,7 @@ class Line: public Shape,
             const PointF& p1,
             const PointF& p2);
 
-    void paint(Canvas &c) const;
+    void paint(Canvas &sb) const;
     void load(const VariantMap&m);
     VariantMap save() const;
 
