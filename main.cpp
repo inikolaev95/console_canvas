@@ -61,18 +61,17 @@ int main()
                PointF(0, 0), PointF(1, 1));
 
 
-        //auto r = Paintable::newInstance("line");
-
-        Line (PointF(0.6,0.9),PointF(0.1,0.9)).paint(c);
+        auto r = Paintable::newInstance("line");
 
 
 
-        /*load(r, VariantMap()
-             << VariantMap::Item( "p1", VariantMap() << VariantMap::Item("p1", PointF(0,0)))
-             << VariantMap::Item( "p2", VariantMap() << VariantMap::Item("p2", PointF(3,3))));
+
+        load(r, VariantMap()
+             << VariantMap::Item( "p1", VariantMap() << VariantMap::Item("p1", PointF(0.1,0.1)))
+             << VariantMap::Item( "p2", VariantMap() << VariantMap::Item("p2", PointF(0.9,0.9))));
 
         r->paint(c);
-*/
+
 
 
 //        CoordinateAxes().paint(c);
