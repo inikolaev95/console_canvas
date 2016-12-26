@@ -47,10 +47,14 @@ void Triangle::paint(Canvas& c) const
         {
             c.setColor(x,y,fillColor());
         }
-
-          Line(PointF(m_v2.x,m_v2.y),PointF(m_v1.x,m_v1.y)).paint(c);
-          Line(PointF(m_v3.x,m_v3.y),PointF(m_v1.x,m_v1.y)).paint(c);
-          Line(PointF(m_v3.x,m_v3.y),PointF(m_v2.x,m_v2.y)).paint(c);
+        auto drawLine = [this, &c](const PointF& v1, const PointF& v2) {
+            Line line(PointF(v2.x,v2.y),PointF(v1.x,v1.y));
+            line.setOutlineColor(outlineColor());
+            line.paint(c);
+        };
+        drawLine(m_v2, m_v1);
+        drawLine(m_v2, m_v3);
+        drawLine(m_v1, m_v3);
     }
     }
 
