@@ -13,7 +13,8 @@ SOURCES += main.cpp \
     Ellipse.cpp \
     Triangle.cpp \
     CoordinateAxes.cpp \
-    FunctionPlot.cpp
+    FunctionPlot.cpp \
+    CurvePlot.cpp
 
 HEADERS += \
     Point.h \
@@ -30,4 +31,5 @@ HEADERS += \
     Factory.h \
     Variant.h \
     VariantMap.h \
-    Persistent.h
+    Persistent.h \
+    CurvePlot.h
