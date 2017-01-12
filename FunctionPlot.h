@@ -2,12 +2,14 @@
 #define FUNCTIONPLOT_H
 
 #include "Paintable.h"
+#include "functional"
+
 
 class FunctionPlot : public Paintable
 {
 public:
     FunctionPlot(
-            std::function<double(double)> f,
+            std::function<double (double)> f,
             char color);
     void paint(Canvas &c) const;
 private:
